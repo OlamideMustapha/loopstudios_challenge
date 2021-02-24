@@ -1,0 +1,28 @@
+{
+  "name": "loopstudios-landing-page-challenge",
+  "version": "1.0.0",
+  "description": "A frontend challenge from frontend mentor",
+  "main": "index.js",
+  "scripts": {
+    "sass": "cd ./src/styles && sass --watch sass:css",
+    "watch": "browser-sync start --server ./ --files './*.html, ./src/*/*/*.css, ./src/*/*.js'",
+    "start": "npm run sass & npm run watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sass",
+    "html",
+    "css",
+    "frontend",
+    "browsersync"
+  ],
+  "author": {
+    "name": "Akinkunmi Mustapha",
+    "email": "akinkunmiMustapha1@gmail.com"
+  },
+  "license": "BSD",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "sass": "^1.32.5"
+  }
+}

@@ -1,0 +1,21 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 14 | /     @include breakpoint-up (medium)
+ * 15 | |       @include flex-column (space-between, flex-start)
+ * 16 | |       background-image: url("../../assets/images/desktop/image-hero.jpg")
+ * 17 | |       filter: brightness(.9)
+ * 18 | |       background-position: bottom
+ * 19 | \       height: 77vh
+ *    '
+ *   sass/partials/header.sass 14:5  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined mixin.\a    \2577 \a 14 \2502  \250c      @include breakpoint-up (medium)\a 15 \2502  \2502        @include flex-column (space-between, flex-start)\a 16 \2502  \2502        background-image: url("../../assets/images/desktop/image-hero.jpg")\a 17 \2502  \2502        filter: brightness(.9)\a 18 \2502  \2502        background-position: bottom\a 19 \2502  \2514        height: 77vh\a    \2575 \a   sass/partials/header.sass 14:5  root stylesheet';
+}
