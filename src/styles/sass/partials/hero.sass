@@ -1,0 +1,18 @@
+.hero
+  &__content
+    @include relative_center
+    @include breakpoint-up (medium)
+      transform: translateY(-83%)
+
+  &__content-text
+    border: solid 3px $white
+    font-size: 10.6vw
+    padding: 6vw 6vw 3vw 6vw
+    text-transform: uppercase
+    width: 100%
+    font-weight: 300
+    @include breakpoint-up (medium)
+      font-size: 5vw
+      padding: 2.9vw 2.8vw
+      padding-bottom: 1.5vw
+      width: 45vw

@@ -1,15 +1,17 @@
 
-hamburger_btn = document.querySelector (".menu-btn")
-header = document.querySelector (".header")
+hamburger_btn = document.querySelector (".nav__button")
+nav = document.querySelector (".nav")
 
 hamburger_btn.addEventListener ("click", event => {
-  if (Array.from (header.classList).includes ("active")) {
-    header.classList.remove ("active")
-    header.classList.add ("inactive")
+  if (Array.from (nav.classList).includes ("nav_active")) {
+    nav.classList.remove ("nav_active")
+  
+    nav.classList.add ("nav_inactive")
     document.body.style.overflow = "overlay"
   } else {
-    header.classList.remove ("inactive")
-    header.classList.add ("active")
+    nav.classList.remove ("nav_inactive")
+
+    nav.classList.add ("nav_active")
     document.body.style.overflow = "hidden"
   }
 })

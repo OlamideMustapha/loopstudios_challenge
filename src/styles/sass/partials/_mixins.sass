@@ -27,3 +27,14 @@ $breakpoints-down: ("xsmall": "374px", "small": "639px", "medium": "1023px", "la
   flex-direction: column
   align-items: $al
   justify-content: $js
+
+
+@mixin absolute_center ()
+  position: absolute
+  top: 50%
+  transform: translateY(-60%)
+
+@mixin relative_center ()
+  position: relative
+  top: 51%
+  transform: translateY(-90%)

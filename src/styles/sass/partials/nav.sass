@@ -1,0 +1,89 @@
+.nav
+  position: relative
+  width: 100%
+  z-index: 1
+  @include flex-row (space-between, center)
+  @include breakpoint-up (medium)
+    filter: brightness(1)
+
+  &_inactive
+    height: max-content
+    background-color: transparent
+  &_active
+    background-color: black
+    height: 100vh
+
+  &__logo
+    align-self: flex-start
+
+  &__logo-img
+    width: 37vw
+    height: 100%
+    @include breakpoint-up (medium)
+      width: 13vw
+
+  &__button
+    align-self: flex-start
+    background-repeat: no-repeat
+    background-size: cover
+    cursor: pointer
+
+  &_active > &__button
+    @include breakpoint-down (small)
+      width: $menu_btn_size + 1
+      height: $menu_btn_size + 1
+      background-image: url("../../assets/images/icon-close.svg")
+  &_inactive > &__button
+    @include breakpoint-down (small)
+      width: $menu_btn_size + 2
+      height: $menu_btn_size
+      background-image: url("../../assets/images/icon-hamburger.svg")
+
+  &__links
+    @include breakpoint-down (small)
+      @include flex-column (space-between, flex-start)
+      @include absolute_center 
+    @include breakpoint-up (medium)
+      @include flex-row (space-between, center)    
+  
+  &_inactive > &__links
+    @include breakpoint-down (small)
+      display: none
+
+  &__link-wrapper
+    @include breakpoint-down (small)
+      margin: 4.1vw 0vw
+    @include breakpoint-up (medium)
+      @include flex-column (center, center)
+      height: 3vw
+      &:not(:last-child)
+        padding-right: 2.3vw
+      &:hover
+        .nav__link-state
+          opacity: 1
+          transition: all 0.5s ease-in-out
+
+  &__link
+    color: $white
+    text-decoration: none
+    font-weight: 300
+    font-size: 6.5vw
+    @include breakpoint-down (small)
+      text-transform: uppercase
+    @include breakpoint-up (medium)
+      font-size: 1vw 
+      font-weight: 600
+      font-family: 'Alata', sans-serif
+      letter-spacing: 0.014em
+
+  &__link-state
+    width: 50%
+    height: 0%
+    margin-top: 0.5vw
+    border: solid 1px white
+    opacity: 0
+
+    @include breakpoint-down (small)
+      display: none
+
+
