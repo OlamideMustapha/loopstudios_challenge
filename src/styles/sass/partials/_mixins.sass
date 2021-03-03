@@ -38,3 +38,14 @@ $breakpoints-down: ("xsmall": "374px", "small": "639px", "medium": "1023px", "la
   position: relative
   top: 51%
   transform: translateY(-90%)
+
+@mixin h1_header ()
+  color: $black
+  font-size: 8.5vw
+  font-weight: 300
+  text-align: center
+  text-transform: uppercase
+  @include breakpoint-up (medium)
+    font-size: 3.2vw
+    text-align: left
+    align-self: flex-start
