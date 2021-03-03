@@ -1,22 +1,54 @@
+$desc_w: 40vw
+  
 .about
+  width: 100%
+  position: relative
   @include flex-column (space-around, center)
+  @include breakpoint-up (medium)
+    @include flex-row (flex-start, center)
+
   &__img-wrapper
     margin: 16vw 0vw 4vw 0vw
+
+    @include breakpoint-up (medium)
+      margin: 6vw 0vw
+      width: 51vw
   &__img
     width: 100%
   &__description
     @include flex-column (space-around, center)
     padding: 0vw 6vw
 
+    @include breakpoint-up (medium)
+      position: absolute
+      background-color: $white
+      padding: 4.5vw 0vw 4vw 6.6vw
+      width: $desc_w
+      right: $desc_w - 31
+      bottom: $desc_w - 32.7
+
   &__description-header
     color: $black
-    font-size: 8vw
+    font-size: 8.5vw
     font-weight: 300
     text-align: center
     text-transform: uppercase
+
+    @include breakpoint-up (medium)
+      font-size: 3.2vw
+      text-align: left
+      align-self: flex-start
+
   &__description-text
     font-size: 4vw
     text-align: center
     color: $darkGray
     text-align: center
     line-height: 1.5em
+
+    @include breakpoint-up (medium)
+      font-size: 1.09vw
+      text-align: left
+      align-self: flex-start
+      font-weight: 600
+      word-spacing: 0.08em
