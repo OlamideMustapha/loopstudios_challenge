@@ -1,0 +1,22 @@
+.about
+  @include flex-column (space-around, center)
+  &__img-wrapper
+    margin: 16vw 0vw 4vw 0vw
+  &__img
+    width: 100%
+  &__description
+    @include flex-column (space-around, center)
+    padding: 0vw 6vw
+
+  &__description-header
+    color: $black
+    font-size: 8vw
+    font-weight: 300
+    text-align: center
+    text-transform: uppercase
+  &__description-text
+    font-size: 4vw
+    text-align: center
+    color: $darkGray
+    text-align: center
+    line-height: 1.5em

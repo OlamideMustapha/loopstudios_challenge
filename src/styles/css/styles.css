@@ -232,13 +232,10 @@ body, html, #root {
 }
 
 .main {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: grey;
 }
 
 .header__hero_bg-img {
@@ -419,6 +416,40 @@ body, html, #root {
     padding-bottom: 1.5vw;
     width: 45vw;
   }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.about__img-wrapper {
+  margin: 16vw 0vw 4vw 0vw;
+}
+.about__img {
+  width: 100%;
+}
+.about__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0vw 6vw;
+}
+.about__description-header {
+  color: black;
+  font-size: 8vw;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+}
+.about__description-text {
+  font-size: 4vw;
+  text-align: center;
+  color: #8c8c8c;
+  text-align: center;
+  line-height: 1.5em;
 }
 
 /*# sourceMappingURL=styles.css.map */
