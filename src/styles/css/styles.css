@@ -196,11 +196,20 @@ body, html, #root {
   font-size: 18px;
   color: white;
   font-family: "Josefin Sans", "Alata", sans-serif;
+  scrollbar-color: #8c8c8c;
+  scrollbar-width: 0.4vw;
+}
+body::-webkit-scrollbar, html::-webkit-scrollbar, #root::-webkit-scrollbar {
+  width: 0.4vw;
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb, #root::-webkit-scrollbar-thumb {
+  background-color: #8c8c8c;
+  border-radius: 2px;
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
-  /* defualt app transition */
 }
 
 .container {
@@ -432,7 +441,7 @@ body, html, #root {
 }
 @media (min-width: 640px) {
   .about__img-wrapper {
-    margin: 6vw 0vw;
+    margin: 6vw 0vw 0vw 0vw;
     width: 51vw;
   }
 }
@@ -452,8 +461,8 @@ body, html, #root {
     background-color: white;
     padding: 4.5vw 0vw 4vw 6.6vw;
     width: 40vw;
-    right: 9vw;
-    bottom: 7.3vw;
+    right: 7vw;
+    bottom: 1.3vw;
   }
 }
 .about__description-header {
@@ -494,6 +503,20 @@ body, html, #root {
   justify-content: space-between;
   width: 100%;
 }
+@media (min-width: 640px) {
+  .products-section {
+    margin: 1vw 0vw;
+  }
+}
+@media (min-width: 640px) {
+  .products-section__header-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
 .products-section__header {
   color: black;
   font-size: 8.5vw;
@@ -509,18 +532,26 @@ body, html, #root {
   }
 }
 .products-section__items-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-gap: 6vw;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(8, auto);
   width: 100%;
+  margin: 9vw 0vw;
+}
+@media (min-width: 640px) {
+  .products-section__items-wrapper {
+    grid-template-columns: repeat(4, 23%);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 2vw;
+    margin: 3vw 0vw;
+  }
 }
 .products-section__item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  margin: 7vw 0vw 0vw 0vw;
   padding: 5vw;
   width: 100%;
   height: 32vw;
@@ -531,9 +562,16 @@ body, html, #root {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
+@media (min-width: 640px) {
+  .products-section__item {
+    padding: 2vw;
+    margin: 0vw;
+    width: 100%;
+  }
+}
 .products-section__item:hover {
-  background-size: 105%;
-  transform: scale(1.05);
+  background-size: 101%;
+  transform: scale(1.04);
 }
 .products-section__item-text {
   color: white;
@@ -542,15 +580,20 @@ body, html, #root {
   width: 32vw;
   text-transform: uppercase;
 }
+@media (min-width: 640px) {
+  .products-section__item-text {
+    font-size: 2.1vw;
+    width: 11vw;
+  }
+}
 .products-section__button {
-  margin: 9vw;
   background-color: transparent;
   outline: none;
   border-radius: 0;
-  height: 10vw;
-  width: 45vw;
+  height: 11vw;
+  width: 44vw;
   border: solid black 0.3vw;
-  font-size: 3.5vw;
+  font-size: 4vw;
   color: black;
   font-weight: 500;
   font-family: "Alata";
@@ -562,6 +605,81 @@ body, html, #root {
 .products-section__button:hover {
   color: white;
   background-color: black;
+}
+@media (min-width: 640px) {
+  .products-section__button {
+    font-size: 1vw;
+    width: 11vw;
+    height: 2.6vw;
+    border-width: 0.1vw;
+    border-radius: 0.1vw;
+  }
+}
+.products-section .item-1 {
+  background-image: url("../../assets/images/mobile/image-deep-earth.jpg");
+}
+@media (min-width: 640px) {
+  .products-section .item-1 {
+    grid-area: 1/1;
+    background-image: url("../../assets/images/desktop/image-deep-earth.jpg");
+  }
+}
+.products-section .item-2 {
+  background-image: url("../../assets/images/mobile/image-night-arcade.jpg");
+}
+@media (min-width: 640px) {
+  .products-section .item-2 {
+    grid-area: 1/2;
+    background-image: url("../../assets/images/desktop/image-night-arcade.jpg");
+  }
+}
+.products-section .item-3 {
+  background-image: url("../../assets/images/mobile/image-soccer-team.jpg");
+}
+@media (min-width: 640px) {
+  .products-section .item-3 {
+    background-image: url("../../assets/images/desktop/image-soccer-team.jpg");
+  }
+}
+.products-section .item-4 {
+  background-image: url("../../assets/images/mobile/image-grid.jpg");
+}
+@media (min-width: 640px) {
+  .products-section .item-4 {
+    background-image: url("../../assets/images/desktop/image-grid.jpg");
+  }
+}
+.products-section .item-5 {
+  background-image: url("../../assets/images/mobile/image-from-above.jpg");
+}
+@media (min-width: 640px) {
+  .products-section .item-5 {
+    background-image: url("../../assets/images/desktop/image-from-above.jpg");
+  }
+}
+.products-section .item-6 {
+  background-image: url("../../assets/images/mobile/image-pocket-borealis.jpg");
+}
+@media (min-width: 640px) {
+  .products-section .item-6 {
+    background-image: url("../../assets/images/desktop/image-pocket-borealis.jpg");
+  }
+}
+.products-section .item-7 {
+  background-image: url("../../assets/images/mobile/image-curiosity.jpg");
+}
+@media (min-width: 640px) {
+  .products-section .item-7 {
+    background-image: url("../../assets/images/desktop/image-curiosity.jpg");
+  }
+}
+.products-section .item-8 {
+  background-image: url("../../assets/images/mobile/image-fisheye.jpg");
+}
+@media (min-width: 640px) {
+  .products-section .item-8 {
+    background-image: url("../../assets/images/desktop/image-fisheye.jpg");
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

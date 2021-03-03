@@ -11,10 +11,12 @@ $desc_w: 40vw
     margin: 16vw 0vw 4vw 0vw
 
     @include breakpoint-up (medium)
-      margin: 6vw 0vw
+      margin: 6vw 0vw 0vw 0vw
       width: 51vw
+
   &__img
     width: 100%
+    
   &__description
     @include flex-column (space-around, center)
     padding: 0vw 6vw
@@ -24,8 +26,8 @@ $desc_w: 40vw
       background-color: $white
       padding: 4.5vw 0vw 4vw 6.6vw
       width: $desc_w
-      right: $desc_w - 31
-      bottom: $desc_w - 32.7
+      right: 7vw
+      bottom: 1.3vw
 
   &__description-header
     @include h1_header
