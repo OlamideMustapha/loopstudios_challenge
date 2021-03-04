@@ -41,31 +41,21 @@
 
   &__links
     @include breakpoint-down (small)
-      @include flex-column (space-between, flex-start)
       @include absolute_center 
-    @include breakpoint-up (medium)
-      @include flex-row (space-between, center)    
   
   &_inactive > &__links
     @include breakpoint-down (small)
       display: none
 
-  &__link-wrapper
+  &__link
     @include breakpoint-down (small)
       margin: 4.1vw 0vw
     @include breakpoint-up (medium)
-      @include flex-column (center, center)
-      height: 3vw
       &:not(:last-child)
         padding-right: 2.3vw
-      &:hover
-        .nav__link-state
-          opacity: 1
-          transition: all 0.5s ease-in-out
 
-  &__link
+  &__link > a
     color: $white
-    text-decoration: none
     font-weight: 300
     font-size: 6.5vw
     @include breakpoint-down (small)
@@ -73,17 +63,3 @@
     @include breakpoint-up (medium)
       font-size: 1vw 
       font-weight: 600
-      font-family: 'Alata', sans-serif
-      letter-spacing: 0.014em
-
-  &__link-state
-    width: 50%
-    height: 0%
-    margin-top: 0.5vw
-    border: solid 1px white
-    opacity: 0
-
-    @include breakpoint-down (small)
-      display: none
-
-

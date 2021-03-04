@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/images/favicon-32x32.png">
 
     <title>Frontend Mentor | Loopstudios landing page</title>
     <link type="text/css" rel="stylesheet" href="../src/styles/css/styles.css" />
@@ -25,26 +25,26 @@
             <!-- Button Element -->
             <div class="button nav__button nav__button_active hide-desktop"></div>
             <!-- Nav Links Element -->
-            <div class="nav__links header__menu-desktop hide-mobile">
-              <div class="nav__link-wrapper">
-                <a class="nav__link" href="#">About</a>
-                <div class="nav__link-state"></div>
+            <div class="menu nav__links header__menu-desktop hide-mobile">
+              <div class="menu__link nav__link">
+                <a href="#">About</a>
+                <div class="menu__link__active"></div>
               </div>
-              <div class="nav__link-wrapper">
-                <a class="nav__link" href="#">Careers</a>
-                <div class="nav__link-state"></div>
+              <div class="menu__link nav__link">
+                <a href="#">Careers</a>
+                <div class="menu__link__active"></div>
               </div>
-              <div class="nav__link-wrapper">
-                <a class="nav__link" href="#">Events</a>
-                <div class="nav__link-state"></div>
+              <div class="menu__link nav__link">
+                <a href="#">Events</a>
+                <div class="menu__link__active"></div>
               </div>
-              <div class="nav__link-wrapper">
-                <a class="nav__link" href="#">Products</a>
-                <div class="nav__link-state"></div>
+              <div class="menu__link nav__link">
+                <a href="#">Products</a>
+                <div class="menu__link__active"></div>
               </div>
-              <div class="nav__link-wrapper">
-                <a class="nav__link" href="#">Support</a>
-                <div class="nav__link-state"></div>
+              <div class="menu__link nav__link">
+                <a href="#">Support</a>
+                <div class="menu__link__active"></div>
               </div> 
             </div>
           </nav>
@@ -86,53 +86,102 @@
           </div>
 
           <div class="products-section__items-wrapper">
-            <div class="products-section__item item-1">
-                 <div class="products-section__item-text">Deep earth</div>
+            <div class="products-section__item">
+              <div class="products-section__item-bg item-bg-1"></div>
+              <div class="products-section__item-text">Deep earth</div>
             </div>
-            <div class="products-section__item item-2">
-                 <div class="products-section__item-text">Night arcade</div>
+            <div class="products-section__item">
+              <div class="products-section__item-bg item-bg-2"></div>
+              <div class="products-section__item-text">Night arcade</div>
             </div>
-            <div class="products-section__item item-3">
-                 <div class="products-section__item-text">Soccer team VR</div>
+            <div class="products-section__item">
+              <div class="products-section__item-bg item-bg-3"></div>
+              <div class="products-section__item-text">Soccer team VR</div>
             </div>
-            <div class="products-section__item item-4">
-                 <div class="products-section__item-text">The grid</div>
+            <div class="products-section__item">
+              <div class="products-section__item-bg item-bg-4"></div>
+              <div class="products-section__item-text">The grid</div>
             </div>
-            <div class="products-section__item  item-5">
-                 <div class="products-section__item-text">From up above VR</div>
+            <div class="products-section__item">
+              <div class="products-section__item-bg item-bg-5"></div>
+              <div class="products-section__item-text">From up above VR</div>
             </div>
-            <div class="products-section__item item-6">
-                 <div class="products-section__item-text">Pocket borealis</div>
+            <div class="products-section__item">
+              <div class="products-section__item-bg item-bg-6"></div>
+              <div class="products-section__item-text">Pocket borealis</div>
             </div>
-            <div class="products-section__item item-7">
-                 <div class="products-section__item-text">The curiosity</div>
+            <div class="products-section__item">
+              <div class="products-section__item-bg item-bg-7"></div>
+              <div class="products-section__item-text">The curiosity</div>
             </div>
-            <div class="products-section__item item-8">
-                 <div class="products-section__item-text">Make it fisheye</div>
+            <div class="products-section__item">
+              <div class="products-section__item-bg item-bg-8"></div>
+              <div class="products-section__item-text">Make it fisheye</div>
             </div>
           </div>
 
           <button class="products-section__button hide-desktop">See all</button>
         </section>
 
-      </main>  
-    
-      About
-      Careers
-      Events
-      Products
-      Support
-    
-      © 2021 Loopstudios. All rights reserved.
-    
-      <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
-      </div>
-    <!-- </div> -->
-    <!-- <main class="main">
-      <h1>Hello world</h1>
-    </main> -->
+      </main>
+
+
+      <footer class="footer container">
+        <div class="footer__logo">
+          <img class="footer__logo-img" src="src/assets/images/logo.svg" alt="Loopstudios" />
+        </div>
+
+        <div class="menu footer__links">
+          <div class="menu__link footer__link">
+            <a href="#">About</a>
+            <div class="menu__link__active"></div>
+          </div>
+          <div class="menu__link footer__link">
+            <a href="#">Careers</a>
+            <div class="menu__link__active"></div>
+          </div>
+          <div class="menu__link footer__link">
+            <a href="#">Events</a>
+            <div class="menu__link__active"></div>
+          </div>
+          <div class="menu__link footer__link">
+            <a href="#">Products</a>
+            <div class="menu__link__active"></div>
+          </div>
+          <div class="menu__link footer__link">
+            <a href="#">Support</a>
+            <div class="menu__link__active"></div>
+          </div>
+        </div>
+
+        <div class="socials footer__socials">
+          <a href="#" class="socials__icon">
+            <img src="src/assets/images/icon-facebook.svg"/>
+            <div class="socials__icon__active"></div>
+          </a>
+          <a href="#" class="socials__icon">
+            <img src="src/assets/images/icon-twitter.svg"/>
+            <div class="socials__icon__active"></div>
+          </a>
+          <a href="#" class="socials__icon">
+            <img src="src/assets/images/icon-pinterest.svg"/>
+            <div class="socials__icon__active"></div>
+          </a>
+          <a href="#" class="socials__icon">
+            <img src="src/assets/images/icon-instagram.svg"/>
+            <div class="socials__icon__active"></div>
+          </a>
+        </div>
+
+        <div class="footer__copy-right">
+          © 2021 Loopstudios. All rights reserved.
+          <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Akinkunmi Mustapha</a>.
+          </div>
+        </div>
+      </footer>
+      
     
     <script src="../src/javaScript/App.js"></script>
   </body>

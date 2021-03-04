@@ -1,0 +1,81 @@
+.footer
+  display: grid
+  grid-gap: 5vw
+  grid-template-rows: repeat(4, auto)
+  grid-template-columns: repeat(1, auto)
+  background-color: $black
+  text-align: center
+  padding-top: 15vw
+  padding-bottom: 15vw
+
+  @include breakpoint-up (medium)
+    grid-gap: 1vw
+    grid-template-rows: repeat(2, auto)
+    grid-template-columns: repeat(2, auto)
+    text-align: left
+    padding-top: 3vw
+    padding-bottom: 3vw
+
+
+  &__logo
+    grid-area: 1 / 1
+    width: 40vw
+    justify-self: center
+    @include breakpoint-up (medium)
+      grid-area: 1 / 1
+      width: 10vw
+      justify-self: left
+
+
+  &__logo-img
+    width: 100%
+
+  &__links
+    grid-area: 2 / 1
+    @include breakpoint-up (medium)
+      grid-area: 2 / 1
+      width: max-content
+
+  &__link
+    margin: 3vw 0vw
+    align-self: center
+    @include breakpoint-up (medium)
+      margin: 0vw  2.5vw 0vw 0vw
+
+  &__link > a
+    font-family: "Alata"
+    text-decoration: none
+    color: $white
+    font-size: 4vw
+    @include breakpoint-up (medium)
+      font-size: 1vw
+
+
+  &__socials
+    grid-area: 3 / 1
+    @include breakpoint-up (medium)
+      grid-area: 1 / 2
+      justify-self: end
+
+  &__copy-right
+    font-family: "Alata"
+    grid-area: 4 / 1
+    color: $darkGray
+    font-size: 4vw
+    @include breakpoint-up (medium)
+      grid-area: 2 / 2
+      justify-self: end
+      font-size: 1.1vw
+
+.attribution
+  width: max-content
+  font-size: 2vw
+  margin: 1vw 0vw
+  @include breakpoint-up (medium)
+    font-size: 0.6vw
+    margin: 0.3vw 0vw
+  > a
+    text-decoration: none
+    color: inherit
+    padding: 0vw
+    margin: 0vw

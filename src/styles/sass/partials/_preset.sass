@@ -8,8 +8,10 @@ body, html, #root
   font-size: $font-size-m
   color: $white
   font-family: 'Josefin Sans', 'Alata', sans-serif
-  @include scroll_bar-y (0.4vw, $darkGray)
-  
+  @include scroll_bar-y (0.9vw, $darkGray)
+  @include breakpoint-up (medium)
+    @include scroll_bar-y (0.4vw, $darkGray)
+
 *, *::before, *::after
   box-sizing: border-box
 

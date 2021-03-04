@@ -1,0 +1,27 @@
+.socials
+  @include flex-row (center, center)
+  padding: 4vw 0vw 1vw 0vw
+  @include breakpoint-up (medium)
+    padding: 0vw
+
+  &__icon
+    text-decoration: none
+    margin: 0vw 2vw
+    @include breakpoint-up (medium)
+      @include flex-column (center, center)
+      margin: 0vw 0.6vw
+      height: 3vw
+    &:hover
+      .socials__icon__active
+        opacity: 1
+        transition: all 0.5s ease-in-out
+
+  &__icon__active
+    width: 50%
+    height: 0%
+    margin-top: 0.5vw
+    border: solid 1px white
+    opacity: 0
+
+    @include breakpoint-down (small)
+      display: none

@@ -1,0 +1,28 @@
+.menu
+  @include breakpoint-down (small)
+    @include flex-column (space-between, flex-start)
+  @include breakpoint-up (medium)
+    @include flex-row (space-between, center)    
+  &__link
+    @include breakpoint-up (medium)
+      @include flex-column (center, center)
+      height: 3vw
+      &:hover
+        .menu__link__active
+          opacity: 1
+          transition: all 0.5s ease-in-out
+  &__link > a
+    text-decoration: none
+    @include breakpoint-up (medium)
+      font-family: 'Alata', sans-serif
+      letter-spacing: 0.014em
+
+  &__link__active
+    width: 50%
+    height: 0%
+    margin-top: 0.5vw
+    border: solid 1px white
+    opacity: 0
+
+    @include breakpoint-down (small)
+      display: none
