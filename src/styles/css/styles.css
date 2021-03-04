@@ -809,7 +809,6 @@ body::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb, #root::-webkit-scr
 }
 
 .attribution {
-  width: max-content;
   font-size: 2vw;
   margin: 1vw 0vw;
 }
